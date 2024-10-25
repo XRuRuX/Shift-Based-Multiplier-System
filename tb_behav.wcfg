@@ -13,13 +13,13 @@
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
       <ZoomEndTime time="740.001 ns"></ZoomEndTime>
-      <Cursor1Time time="740.000 ns"></Cursor1Time>
+      <Cursor1Time time="345.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="206"></NameColumnWidth>
+      <NameColumnWidth column_width="186"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -51,5 +51,45 @@
    <wvobject fp_name="/tb/top_inst/rez_reg" type="array">
       <obj_property name="ElementShortName">rez_reg[15:0]</obj_property>
       <obj_property name="ObjectShortName">rez_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_adder/dataout" type="array">
+      <obj_property name="ElementShortName">dataout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dataout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_adder/datain2" type="array">
+      <obj_property name="ElementShortName">datain2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">datain2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_adder/datain1" type="array">
+      <obj_property name="ElementShortName">datain1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">datain1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_secv/b0" type="logic">
+      <obj_property name="ElementShortName">b0</obj_property>
+      <obj_property name="ObjectShortName">b0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_secv/if7" type="logic">
+      <obj_property name="ElementShortName">if7</obj_property>
+      <obj_property name="ObjectShortName">if7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/a_reg" type="array">
+      <obj_property name="ElementShortName">a_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/b_reg" type="array">
+      <obj_property name="ElementShortName">b_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_secv/ns" type="array">
+      <obj_property name="ElementShortName">ns[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ns[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_secv/cs" type="array">
+      <obj_property name="ElementShortName">cs[2:0]</obj_property>
+      <obj_property name="ObjectShortName">cs[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/plrez" type="logic">
+      <obj_property name="ElementShortName">plrez</obj_property>
+      <obj_property name="ObjectShortName">plrez</obj_property>
    </wvobject>
 </wave_config>

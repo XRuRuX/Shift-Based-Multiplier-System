@@ -36,7 +36,7 @@ module tb();
     
     initial
     begin
-        #0 ld_sync_op = 1'b0; ain = 8'b1001; bin = 8'b1111;
+        #0 ld_sync_op = 1'b0; ain = 8'd22; bin = 8'd1;
         #30 ld_sync_op = 1'b1;
         #30 ld_sync_op = 1'b0;
         #30

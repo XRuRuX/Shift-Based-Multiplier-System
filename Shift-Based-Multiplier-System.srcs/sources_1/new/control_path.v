@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+// Generates signals based on input and state 
 module pl_gen(clk, ld_sync_op, ready, pla, plb, init);
     input clk, ld_sync_op, ready;
     output reg pla, plb, init;
@@ -49,8 +49,11 @@ module pl_gen(clk, ld_sync_op, ready, pla, plb, init);
             2'b10: begin pla = 1'b0; plb = 1'b1; init = 1'b0; end
             2'b11: init = 1'b1;
         endcase
+        
 endmodule
 
+
+// Generates signals based on input and state 
 module secv(
         input clk, init, b0, if7,
         output reg sha, shb, incc, plrez, sum, done, ready
@@ -78,12 +81,12 @@ module secv(
     
     always @(cs)
         case(cs)
-            3'b000: ready = 1'b1;
-            3'b001: begin sha = 1'b0; shb = 1'b0; incc = 1'b0; plrez = 1'b0; sum = 1'b0; done = 1'b0; ready = 1'b0; end
+            3'b000: begin ready = 1'b1; sum = 1'b0; sha = 1'b0; shb = 1'b0; incc = 1'b0; plrez = 1'b0; done = 1'b0; end
+            3'b001: begin sum = 1'b0; sha = 1'b0; shb = 1'b0; incc = 1'b0; plrez = 1'b0; done = 1'b0; ready = 1'b0; end
             3'b100: begin sum = 1'b1; sha = 1'b1; shb = 1'b1; incc = 1'b1; plrez = 1'b1; done = 1'b0; ready = 1'b0; end
             3'b101: begin sum = 1'b1; sha = 1'b0; shb = 1'b0; incc = 1'b0; plrez = 1'b1; done = 1'b1; ready = 1'b0; end
             3'b010: begin sum = 1'b0; sha = 1'b1; shb = 1'b1; incc = 1'b1; plrez = 1'b0; done = 1'b0; ready = 1'b0; end
-            3'b011: begin sum = 1'b0; sha = 1'b0; shb = 1'b0; incc = 1'b0; plrez = 1'b1; done = 1'b1; ready = 1'b0; end
+            3'b011: begin sum = 1'b0; sha = 1'b0; shb = 1'b0; incc = 1'b0; plrez = 1'b0; done = 1'b1; ready = 1'b0; end
         endcase
     
 endmodule
