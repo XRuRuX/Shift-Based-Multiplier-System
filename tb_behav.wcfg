@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="236.200 ns"></ZoomStartTime>
-      <ZoomEndTime time="400.001 ns"></ZoomEndTime>
-      <Cursor1Time time="290.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="740.001 ns"></ZoomEndTime>
+      <Cursor1Time time="740.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="154"></NameColumnWidth>
+      <NameColumnWidth column_width="206"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="8" />
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -36,64 +36,20 @@
       <obj_property name="ElementShortName">bin[7:0]</obj_property>
       <obj_property name="ObjectShortName">bin[7:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb/pla" type="logic">
+      <obj_property name="ElementShortName">pla</obj_property>
+      <obj_property name="ObjectShortName">pla</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/plb" type="logic">
+      <obj_property name="ElementShortName">plb</obj_property>
+      <obj_property name="ObjectShortName">plb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/init" type="logic">
+      <obj_property name="ElementShortName">init</obj_property>
+      <obj_property name="ObjectShortName">init</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb/top_inst/rez_reg" type="array">
       <obj_property name="ElementShortName">rez_reg[15:0]</obj_property>
       <obj_property name="ObjectShortName">rez_reg[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/rez" type="array">
-      <obj_property name="ElementShortName">rez[15:0]</obj_property>
-      <obj_property name="ObjectShortName">rez[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/rez_displayy" type="array">
-      <obj_property name="ElementShortName">rez_displayy[15:0]</obj_property>
-      <obj_property name="ObjectShortName">rez_displayy[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/a_reg" type="array">
-      <obj_property name="ElementShortName">a_reg[15:0]</obj_property>
-      <obj_property name="ObjectShortName">a_reg[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/b_reg" type="array">
-      <obj_property name="ElementShortName">b_reg[7:0]</obj_property>
-      <obj_property name="ObjectShortName">b_reg[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/u_secv/ns" type="array">
-      <obj_property name="ElementShortName">ns[2:0]</obj_property>
-      <obj_property name="ObjectShortName">ns[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/u_secv/cs" type="array">
-      <obj_property name="ElementShortName">cs[2:0]</obj_property>
-      <obj_property name="ObjectShortName">cs[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/plrez" type="logic">
-      <obj_property name="ElementShortName">plrez</obj_property>
-      <obj_property name="ObjectShortName">plrez</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/sel" type="array">
-      <obj_property name="ElementShortName">sel[1:0]</obj_property>
-      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/u_mux_3_1/in0" type="array">
-      <obj_property name="ElementShortName">in0[15:0]</obj_property>
-      <obj_property name="ObjectShortName">in0[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/u_mux_3_1/in1" type="array">
-      <obj_property name="ElementShortName">in1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">in1[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/u_mux_3_1/in2" type="array">
-      <obj_property name="ElementShortName">in2[7:0]</obj_property>
-      <obj_property name="ObjectShortName">in2[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/u_mux_3_1/out" type="array">
-      <obj_property name="ElementShortName">out[15:0]</obj_property>
-      <obj_property name="ObjectShortName">out[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/disp_btn" type="logic">
-      <obj_property name="ElementShortName">disp_btn</obj_property>
-      <obj_property name="ObjectShortName">disp_btn</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/disp_btn_out_final" type="logic">
-      <obj_property name="ElementShortName">disp_btn_out_final</obj_property>
-      <obj_property name="ObjectShortName">disp_btn_out_final</obj_property>
    </wvobject>
 </wave_config>

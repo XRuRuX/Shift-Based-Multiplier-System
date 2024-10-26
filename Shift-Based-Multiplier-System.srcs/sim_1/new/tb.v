@@ -22,12 +22,11 @@
 
 module tb();
     reg clk, ld_sync_op;
-    reg disp_btn;
     reg [7:0] ain;
     reg [7:0] bin;
-    wire[15:0] rez;
+    wire pla, plb, init;
     
-    top top_inst(.clk(clk), .ld_sync_op(ld_sync_op), .disp_btn(disp_btn), .a(ain), .b(bin), .rez_display(rez));
+    top top_inst(.clk(clk), .ld_sync_op(ld_sync_op), .a(ain), .b(bin));
     
     initial
     begin
@@ -37,7 +36,7 @@ module tb();
     
     initial
     begin
-        #0 ld_sync_op = 1'b0; ain = 8'd255; bin = 8'd255; disp_btn = 1'b0;
+        #0 ld_sync_op = 1'b0; ain = 8'b1001; bin = 8'b1111;
         #30 ld_sync_op = 1'b1;
         #30 ld_sync_op = 1'b0;
         #30
@@ -46,13 +45,6 @@ module tb();
         #30 ld_sync_op = 1'b1;
         #30 ld_sync_op = 1'b0;
         #30 ld_sync_op = 1'b1;
-        
-        #50 disp_btn = 1'b1;
-        #10 disp_btn = 1'b0;
-        #10 disp_btn = 1'b1;
-        #30 disp_btn = 1'b0;
-        #20 disp_btn = 1'b1;
-        #20 disp_btn = 1'b0;
         
         #500 $finish;
     end
