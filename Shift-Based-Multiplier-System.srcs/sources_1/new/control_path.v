@@ -54,6 +54,33 @@ endmodule
 
 
 // Generates signals based on input and state 
+module display_gen(clk, disp_btn, sel);
+    input clk, disp_btn;
+    output reg[1:0] sel;
+    
+    reg [1:0] cs = 2'b00, ns = 2'b00;
+    
+    always @(posedge clk) 
+        cs <= ns;
+        
+    always @(cs or disp_btn) 
+        case ({cs, disp_btn})
+            3'b00_0: ns = 2'b00;
+            3'b00_1: ns = 2'b01;
+            3'b01_0: ns = 2'b01;
+            3'b01_1: ns = 2'b10;
+            3'b10_0: ns = 2'b10;
+            3'b10_1: ns = 2'b00;
+            default: ns = 2'b00;
+        endcase
+    
+    always @(cs)
+        sel <= cs;
+    
+endmodule
+
+
+// Generates signals based on input and state 
 module secv(
         input clk, init, b0, if7,
         output reg sha, shb, incc, plrez, sum, done, ready
