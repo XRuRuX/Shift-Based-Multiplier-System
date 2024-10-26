@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="236.200 ns"></ZoomStartTime>
-      <ZoomEndTime time="400.001 ns"></ZoomEndTime>
-      <Cursor1Time time="290.000 ns"></Cursor1Time>
+      <ZoomStartTime time="204.750 ns"></ZoomStartTime>
+      <ZoomEndTime time="626.251 ns"></ZoomEndTime>
+      <Cursor1Time time="325.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="154"></NameColumnWidth>
+      <NameColumnWidth column_width="130"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -43,10 +43,6 @@
    <wvobject fp_name="/tb/rez" type="array">
       <obj_property name="ElementShortName">rez[15:0]</obj_property>
       <obj_property name="ObjectShortName">rez[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/top_inst/rez_displayy" type="array">
-      <obj_property name="ElementShortName">rez_displayy[15:0]</obj_property>
-      <obj_property name="ObjectShortName">rez_displayy[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/top_inst/a_reg" type="array">
       <obj_property name="ElementShortName">a_reg[15:0]</obj_property>
@@ -95,5 +91,13 @@
    <wvobject fp_name="/tb/top_inst/disp_btn_out_final" type="logic">
       <obj_property name="ElementShortName">disp_btn_out_final</obj_property>
       <obj_property name="ObjectShortName">disp_btn_out_final</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_secv/clk_btn" type="logic">
+      <obj_property name="ElementShortName">clk_btn</obj_property>
+      <obj_property name="ObjectShortName">clk_btn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/top_inst/u_secv/clk_btn_1" type="logic">
+      <obj_property name="ElementShortName">clk_btn_1</obj_property>
+      <obj_property name="ObjectShortName">clk_btn_1</obj_property>
    </wvobject>
 </wave_config>

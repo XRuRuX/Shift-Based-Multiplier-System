@@ -25,6 +25,7 @@ module top(
     input clk,
     input ld_sync_op,
     input disp_btn,
+    input clk_btn,
     input [7:0] a,
     input [7:0] b,
     output [15:0] rez_display
@@ -32,8 +33,8 @@ module top(
     
     wire [15:0] a_reg;
     wire[7:0] b_reg;
-    wire ld_sync_op_out, disp_btn_out;       
-    wire ld_sync_op_out_final, disp_btn_out_final;      
+    wire ld_sync_op_out, disp_btn_out, clk_btn_out;       
+    wire ld_sync_op_out_final, disp_btn_out_final, clk_btn_out_final;      
     wire pla, plb, init; 
     wire if7, b0, incc, plrez, sum, sha, shb, ready;
     wire [15:0] rez_reg;
@@ -43,10 +44,12 @@ module top(
     // Sync buttons
     sync u_sync (.clk(clk), .in(ld_sync_op), .out(ld_sync_op_out));
     sync u2_sync (.clk(clk), .in(disp_btn), .out(disp_btn_out));
+    sync u3_sync (.clk(clk), .in(clk_btn), .out(clk_btn_out));
     
     // One period buttons
     one_period u_one_period (.clk(clk), .in(ld_sync_op_out), .out(ld_sync_op_out_final));
     one_period u2_one_period (.clk(clk), .in(disp_btn_out), .out(disp_btn_out_final));
+    one_period u3_one_period (.clk(clk), .in(clk_btn_out), .out(clk_btn_out_final));
     
     // Buttons that change states
     pl_gen u_pl_gen(.clk(clk), .ld_sync_op(ld_sync_op_out_final), .ready(ready), .pla(pla), .plb(plb), .init(init));
@@ -64,7 +67,7 @@ module top(
     adder u_adder(.datain1(rez_reg), .datain2({8'b00000000, a_reg}), .dataout(out_sum));
     
     // Main state machine
-    secv u_secv(.clk(clk), .init(init), .b0(b0), .if7(if7), .sha(sha), .shb(shb), .incc(incc), .plrez(plrez), .sum(sum), .done(done), .ready(ready));
+    secv u_secv(.clk(clk), .init(init), .b0(b0), .if7(if7), .clk_btn(clk_btn_out_final), .sha(sha), .shb(shb), .incc(incc), .plrez(plrez), .sum(sum), .done(done), .ready(ready));
     
     // Out mux
     mux_3_1 u_mux_3_1(.in0(rez_reg), .in1(a_reg), .in2(b_reg), .sel(sel), .out(rez_display));

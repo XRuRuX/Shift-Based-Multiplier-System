@@ -82,27 +82,28 @@ endmodule
 
 // Generates signals based on input and state 
 module secv(
-        input clk, init, b0, if7,
+        input clk, init, b0, if7, clk_btn,
         output reg sha, shb, incc, plrez, sum, done, ready
     );
     
     reg [2:0] cs = 3'b000, ns = 3'b000;
     
     always @(posedge clk)
-        cs <= ns;
+        cs <= ns;         
     
-    always @(cs or init or b0 or if7)
-        casex({cs, b0, if7, init})
-            6'b000_x_x_0: ns = 3'b000;
-            6'b000_x_x_1: ns = 3'b001;
-            6'b001_0_0_x: ns = 3'b010;
-            6'b001_0_1_x: ns = 3'b011;
-            6'b001_1_0_x: ns = 3'b100;   
-            6'b001_1_1_x: ns = 3'b101;
-            6'b010_x_x_x: ns = 3'b001;
-            6'b011_x_x_x: ns = 3'b000;
-            6'b100_x_x_x: ns = 3'b001;
-            6'b101_x_x_x: ns = 3'b000;
+    always @(cs or init or b0 or if7 or clk_btn)
+        casex({cs, b0, if7, init, clk_btn})
+            7'b000_x_x_0_x: ns = 3'b000;
+            7'b000_x_x_1_x: ns = 3'b001;
+            7'b001_x_x_x_0: ns = 3'b001;
+            7'b001_0_0_x_x: ns = 3'b010;
+            7'b001_0_1_x_x: ns = 3'b011;
+            7'b001_1_0_x_x: ns = 3'b100;   
+            7'b001_1_1_x_x: ns = 3'b101;
+            7'b010_x_x_x_x: ns = 3'b001;
+            7'b011_x_x_x_x: ns = 3'b000;
+            7'b100_x_x_x_x: ns = 3'b001;
+            7'b101_x_x_x_x: ns = 3'b000;
             default: ns = 3'b000;
         endcase
     
