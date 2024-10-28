@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Oct 28 18:12:05 2024
+# Process ID: 9084
+# Current directory: C:/Users/alexp/Desktop/Semestrul_I/Structuri hardware reconfigurabile/Laboratoare/Laborator 2 - Proiect/Shift-Based-Multiplier-System/Shift-Based-Multiplier-System.runs/impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: C:/Users/alexp/Desktop/Semestrul_I/Structuri hardware reconfigurabile/Laboratoare/Laborator 2 - Proiect/Shift-Based-Multiplier-System/Shift-Based-Multiplier-System.runs/impl_1/top.vdi
+# Journal file: C:/Users/alexp/Desktop/Semestrul_I/Structuri hardware reconfigurabile/Laboratoare/Laborator 2 - Proiect/Shift-Based-Multiplier-System/Shift-Based-Multiplier-System.runs/impl_1\vivado.jou
+# Running On        :DESKTOP-5H4UQ7V
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :Intel(R) Core(TM) i3-7100 CPU @ 3.90GHz
+# CPU Frequency     :3912 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :17136 MB
+# Swap memory       :2550 MB
+# Total Virtual     :19686 MB
+# Available Virtual :8282 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

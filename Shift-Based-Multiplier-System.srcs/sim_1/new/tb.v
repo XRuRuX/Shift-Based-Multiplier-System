@@ -47,7 +47,53 @@ module tb();
         #30 ld_sync_op = 1'b1;
         #30 ld_sync_op = 1'b0;
         #30 ld_sync_op = 1'b1;
+        #30 ld_sync_op = 1'b0;
         
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        
+        #50 disp_btn = 1'b1;
+        #10 disp_btn = 1'b0;
+        #10 disp_btn = 1'b1;
+        #30 disp_btn = 1'b0;
+        #20 disp_btn = 1'b1;
+        #20 disp_btn = 1'b0;
+        
+        #200
+        
+        #0 ld_sync_op = 1'b0; ain = 8'd12; bin = 8'd12; disp_btn = 1'b0; clk_btn = 1'b0;
+        #30 ld_sync_op = 1'b1;
+        #30 ld_sync_op = 1'b0;
+        #30
+        #30 ld_sync_op = 1'b1;
+        #30 ld_sync_op = 1'b0;
+        #30 ld_sync_op = 1'b1;
+        #30 ld_sync_op = 1'b0;
+        #30 ld_sync_op = 1'b1;
+        #30 ld_sync_op = 1'b0;
+        
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
+        #35 clk_btn = 1'b1;
+        #35 clk_btn = 1'b0;
         #35 clk_btn = 1'b1;
         #35 clk_btn = 1'b0;
         #35 clk_btn = 1'b1;
